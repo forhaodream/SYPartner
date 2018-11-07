@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B9CD</color>
+    <color name="colorPrimaryDark">#1EB9CB</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="home_text_lv">#4b4b4b</color>
+    <color name="home_text_hui">#4b4b4b</color>
+</resources>
