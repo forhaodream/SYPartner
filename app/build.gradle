@@ -40,4 +40,7 @@ dependencies {
     implementation 'com.github.forhaodream.ch:chtool:0.0.6'
     // banner
     implementation 'com.github.dongjunkun:BannerLayout:1.0.6'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+    //地址选择
+    implementation 'liji.library.dev:citypickerview:0.7.0'
 }

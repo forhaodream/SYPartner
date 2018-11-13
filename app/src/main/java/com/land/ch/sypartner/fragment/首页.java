@@ -2,9 +2,7 @@ package com.land.ch.sypartner.fragment;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.land.ch.sypartner.R;

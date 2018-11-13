@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/as_color">
+
+    <include layout="@layout/layout_title"/>
+
+    <com.yyydjk.library.BannerLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="1000px"
+        android:background="@android:color/white"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_below="@id/banner"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/商品名称tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:text="商品名称"
+            android:textColor="@color/text_grays"/>
+
+        <TextView
+            android:id="@+id/价格tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/商品名称tv"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:text="8000糖果"
+            android:textColor="@android:color/holo_orange_dark"/>
+
+        <TextView
+            android:id="@+id/截止日期tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30px"
+            android:layout_marginRight="30px"
+            android:text="截止日期: 10-30"
+            android:textColor="@color/text_gray"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <Button
+        android:id="@+id/点击兑换btn"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:text="点击兑换"
+        android:textColor="@android:color/white"/>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400px"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/展示img"
+        android:layout_width="360px"
+        android:layout_height="360px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30px"/>
+
+    <TextView
+        android:id="@+id/项目名称tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/展示img"
+        android:layout_toRightOf="@id/展示img"/>
+
+    <TextView
+        android:id="@+id/所属地区tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/项目名称tv"
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@id/展示img"/>
+
+    <TextView
+        android:id="@+id/标签tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/所属地区tv"
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@id/展示img"/>
+
+    <TextView
+        android:id="@+id/单价tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/展示img"
+        android:layout_marginRight="30px"/>
+
+    <TextView
+        android:id="@+id/最高佣金tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30px"/>
+
+</com.zhy.autolayout.AutoRelativeLayout>

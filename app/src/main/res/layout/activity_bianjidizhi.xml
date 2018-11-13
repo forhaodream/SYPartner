@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".个人.编辑地址">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_right"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/收货人LEV"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_marginTop="12px"
+            app:LES_label="收货人"
+            app:LES_valueHint="收货人"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/电话LEV"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_marginTop="12px"
+            app:LES_label="电话"
+            app:LES_valueHint="电话"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/收货地址LEV"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_marginTop="12px"
+            app:LES_label="收货地址"
+            app:LES_valueHint="收货地址"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/详细地址LEV"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_marginTop="12px"
+            app:LES_label="详细地址"
+            app:LES_valueHint="详细地址"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/保存btn"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50px"
+        android:background="@color/colorPrimary"
+        android:text="保 存"
+        android:textColor="@android:color/white"/>
+</com.zhy.autolayout.AutoRelativeLayout>

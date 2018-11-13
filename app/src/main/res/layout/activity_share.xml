@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".首页.共享房源">
+
+    <include layout="@layout/layout_title"/>
+
+    <com.yyydjk.library.BannerLayout
+        android:id="@+id/BannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600px"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/text_grays"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="区域"/>
+
+        <Spinner
+            android:id="@+id/区域Sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_grays"/>
+
+    <include layout="@layout/layout_text_center"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.zhy.autolayout.AutoLinearLayout>

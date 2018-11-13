@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/as_color"
+    android:orientation="vertical"
+    tools:context=".自习室.StudyDetailActivity">
+
+    <include layout="@layout/layout_title"/>
+
+    <!--<com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer-->
+        <!--android:id="@+id/detail_player"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="800px"/>-->
+
+    <TextView
+        android:id="@+id/activity_study_detail_include"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30px"/>
+</com.zhy.autolayout.AutoLinearLayout>

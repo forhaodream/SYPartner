@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.zhy.autolayout.AutoLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+    android:background="@color/as_color"
+    android:orientation="vertical"
+    tools:context=".个人.收货地址">
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/layout_title_rlc"
         android:layout_width="match_parent"
         android:layout_height="130px"
-        android:background="@android:color/white">
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/layout_title_back"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:src="@mipmap/back"/>
 
         <TextView
-            android:text="糖果屋"
-            android:id="@+id/layout_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textColor="@color/text_grays"
+            android:text="收货地址"
+            android:textColor="@color/white"
             android:textSize="16sp"/>
 
         <TextView
-            android:id="@+id/使用说明text"
+            android:id="@+id/layout_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="30px"
-            android:text="使用说明"
-            android:textColor="@android:color/black"
+            android:text="添加新地址"
+            android:textColor="@color/white"
             android:textSize="14sp"/>
     </com.zhy.autolayout.AutoRelativeLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/SwipeRefreshLayout"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/RecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </android.support.v4.widget.SwipeRefreshLayout>
 </com.zhy.autolayout.AutoLinearLayout>

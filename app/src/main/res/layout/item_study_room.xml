@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300px"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="240px"
+        android:layout_height="240px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/head"
+        android:layout_marginLeft="30px"
+        android:layout_toRightOf="@id/head"
+        android:textColor="@color/text_grays"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@id/head"
+        android:textColor="@color/text_grays"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40px"
+        android:layout_marginRight="40px"
+        android:textColor="@color/text_grays"/>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -3,6 +3,8 @@ package com.land.ch.sypartner.fragment;
 import android.os.Bundle;
 import android.view.View;
 
+import com.land.ch.sypartner.R;
+
 import ch.chtool.base.BaseFragment;
 
 /**
@@ -12,7 +14,7 @@ import ch.chtool.base.BaseFragment;
 public class 战队 extends BaseFragment {
     @Override
     protected int setView() {
-        return 0;
+        return R.layout.fragment_zhandui;
     }
 
     @Override

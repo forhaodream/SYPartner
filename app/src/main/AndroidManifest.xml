@@ -3,6 +3,7 @@
           package="com.land.ch.sypartner">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -22,6 +23,35 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.公共分类界面">
+        </activity>
+        <activity android:name=".activity.房源速配">
+        </activity>
+        <activity android:name=".首页.学区房搜索">
+        </activity>
+        <activity android:name=".首页.共享房源">
+        </activity>
+        <activity android:name=".首页.地铁出行">
+        </activity>
+        <activity android:name=".首页.金融合作">
+        </activity>
+        <activity android:name=".首页.行业招聘">
+        </activity>
+        <activity android:name=".个人.订阅列表">
+        </activity>
+        <activity android:name=".activity.WebViewActivity"/>
+        <activity android:name=".糖果屋.CandyDetailActivity">
+        </activity>
+        <activity android:name=".个人.收货地址">
+        </activity>
+        <activity android:name=".个人.SettingActivity">
+        </activity>
+        <activity android:name=".自习室.StudyDetailActivity">
+        </activity>
+        <activity android:name=".糖果屋.使用说明">
+        </activity>
+        <activity android:name=".个人.编辑地址">
         </activity>
     </application>
 

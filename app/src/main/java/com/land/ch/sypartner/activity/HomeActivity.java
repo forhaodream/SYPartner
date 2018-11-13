@@ -9,13 +9,13 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -33,9 +33,6 @@ import com.land.ch.sypartner.fragment.首页;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import ch.chtool.net.OkHttpClientManager;
-import ch.chtool.utils.SpUtils;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String TAG = "HomeActivity";
@@ -69,28 +66,29 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         List<String> permissionList = new ArrayList<>();
-        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.READ_PHONE_STATE) !=
-                PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.READ_PHONE_STATE);
-        }
-        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
-                PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        }
-        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) !=
-                PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
-                PackageManager.PERMISSION_GRANTED) {
-            permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-        }
-        if (!permissionList.isEmpty()) {
-            String[] permissions = permissionList.toArray(new String[permissionList.size()]);
-            ActivityCompat.requestPermissions(HomeActivity.this, permissions, 1);
-        } else {
-            Log.d("homeA", "已授权");
-        }
+//
+//        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.READ_PHONE_STATE) !=
+//                PackageManager.PERMISSION_GRANTED) {
+//            permissionList.add(Manifest.permission.READ_PHONE_STATE);
+//        }
+//        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+//                PackageManager.PERMISSION_GRANTED) {
+//            permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//        }
+//        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) !=
+//                PackageManager.PERMISSION_GRANTED) {
+//            permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
+//        }
+//        if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) !=
+//                PackageManager.PERMISSION_GRANTED) {
+//            permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+//        }
+//        if (!permissionList.isEmpty()) {
+//            String[] permissions = permissionList.toArray(new String[permissionList.size()]);
+//            ActivityCompat.requestPermissions(HomeActivity.this, permissions, 1);
+//        } else {
+//            Log.d("homeA", "已授权");
+//        }
         npt = getSharedPreferences("user_npt", MODE_PRIVATE);
 
         mHandler = new Handler();

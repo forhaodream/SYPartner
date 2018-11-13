@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400px"
+    android:layout_height="600px"
+    android:background="@drawable/gray_shape">
+
+    <ImageView
+        android:id="@+id/item_candy_head"
+        android:layout_width="320px"
+        android:layout_height="320px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/item_candy_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/item_candy_head"
+        android:layout_marginTop="30px"/>
+
+    <TextView
+        android:id="@+id/item_candy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30px"
+        android:layout_marginRight="30px"
+        android:textColor="@android:color/holo_orange_dark"/>
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

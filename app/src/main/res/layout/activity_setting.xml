@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/as_color"
+    tools:context=".个人.SettingActivity">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/个人资料修改LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_imageRight="@mipmap/you"
+            app:LTS_label="个人资料修改"
+            app:segmentation="false"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/收货地址LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:layout_marginTop="12px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_imageRight="@mipmap/you"
+            app:LTS_label="收货地址"
+            app:segmentation="false"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/修改密码LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:layout_marginTop="12px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_imageRight="@mipmap/you"
+            app:LTS_label="修改密码"
+            app:segmentation="false"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/常见问题LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:layout_marginTop="12px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_imageRight="@mipmap/you"
+            app:LTS_label="常见问题"
+            app:segmentation="false"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/关于我们LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:layout_marginTop="12px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_imageRight="@mipmap/you"
+            app:LTS_label="关于我们"
+            app:LTS_valueColor="@color/text_gray"
+            app:segmentation="false"/>
+
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/客服电话LTV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:layout_marginTop="12px"
+            app:LTS_imageLeft="@mipmap/ic_launcher"
+            app:LTS_label="客服电话"
+            app:LTS_value="400-888-8888"
+            app:segmentation="false"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/退出登录btn"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50px"
+        android:background="@color/colorPrimary"
+        android:text="退出登录"
+        android:textColor="@android:color/white"/>
+</com.zhy.autolayout.AutoRelativeLayout>

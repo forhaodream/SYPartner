@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".首页.学区房搜索">
+
+    <include layout="@layout/layout_title"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="80px"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="区域选择:"/>
+
+            <Spinner
+                android:id="@+id/区域选择Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="学级划分:"/>
+
+            <Spinner
+                android:id="@+id/学级划分Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="学校选择:"/>
+
+            <Spinner
+                android:id="@+id/学校选择Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="价格:"/>
+
+            <Spinner
+                android:id="@+id/价格Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="面积:"/>
+
+            <Spinner
+                android:id="@+id/面积Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="功能:"/>
+
+            <Spinner
+                android:id="@+id/功能Sp"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/搜索btn"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_margin="200px"
+        android:text="搜索"/>
+</com.zhy.autolayout.AutoLinearLayout>

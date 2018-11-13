@@ -7,4 +7,51 @@
 
     <color name="home_text_lv">#4b4b4b</color>
     <color name="home_text_hui">#4b4b4b</color>
+
+    <color name="text_grays">#707070</color>
+
+
+    <color name="text_red">#ee0101</color>
+    <color name="text_gray">#B3B3B3</color>
+    <color name="text_orange">#f13131</color>
+    <color name="home_tab_text_hui">#5D5F6A</color>
+    <color name="home_search_text_hui">#8a8a8a</color>
+
+    <color name="color_theme">#ffffff</color>
+
+    <color name="view_color">#e9e7ef</color>
+    <color name="search_draw_bg">#f6f6f6</color>
+
+    <color name="view_hui">#f8f8f8</color>
+
+
+    60a0fa
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="gray">#ccc</color>
+
+
+    <color name="drop_down_unselected">#111111</color>
+    <color name="black">#111111</color>
+
+    <color name="mask_color">#88888888</color>
+    <color name="red">#ee0101</color>
+    <color name="dark_blue">#266eaf</color>
+
+    <color name="bg_color">#F1F1F1</color>
+    <color name="color_5">#ff5c01</color>
+    <color name="color_9">#ff0068</color>
+    <color name="color_23">#5abf3d</color>
+    <color name="color_24">#00ff65</color>
+
+    <color name="shengwu">#B3DD9B</color>
+    <color name="line_default_color">#B3DD9B</color>
+    <color name="theme_green">#00B9CD</color>
+
+    <color name="blue">#ddf0ff</color>
+
+    <color name="as_color">#efefef</color>
+    <color name="start_blue">#bcedf1</color>
+    <color name="end_blue">#05bbcc</color>
 </resources>
