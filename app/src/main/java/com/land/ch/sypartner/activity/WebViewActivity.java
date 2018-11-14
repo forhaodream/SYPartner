@@ -28,10 +28,10 @@ public class WebViewActivity extends Activity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        initView();
         Intent intent = getIntent();
         title = intent.getStringExtra("title_str");
         webUrl = intent.getStringExtra("web_url");
+        initView();
 
     }
 

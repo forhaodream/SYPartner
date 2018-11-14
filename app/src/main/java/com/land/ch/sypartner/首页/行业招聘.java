@@ -3,16 +3,20 @@ package com.land.ch.sypartner.首页;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.liquorslib.view.ToolbarView;
 import com.land.ch.sypartner.R;
 import com.yyydjk.library.BannerLayout;
 
-public class 行业招聘 extends AppCompatActivity {
+public class 行业招聘 extends AppCompatActivity implements View.OnClickListener {
 
-    private ToolbarView m行业招聘tbv;
     private BannerLayout mBanner;
     private RecyclerView mRecyclerView;
+    private ImageView mLayoutTitleBack;
+    private TextView mLayoutTitleRight;
+    private TextView mLayoutTitleCenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +26,25 @@ public class 行业招聘 extends AppCompatActivity {
     }
 
     private void initView() {
-        m行业招聘tbv = (ToolbarView) findViewById(R.id.行业招聘tbv);
-        m行业招聘tbv.setOnViewClickListener(new ToolbarView.OnLeftClickListener() {
-            @Override
-            public void onClick() {
-                finish();
-            }
-        });
         mBanner = (BannerLayout) findViewById(R.id.banner);
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
+        mLayoutTitleBack = findViewById(R.id.layout_title_back);
+        mLayoutTitleBack.setOnClickListener(this);
+        mLayoutTitleRight = findViewById(R.id.layout_title_right);
+        mLayoutTitleRight.setOnClickListener(this);
+        mLayoutTitleRight.setText("");
+        mLayoutTitleCenter = findViewById(R.id.layout_title_center);
+        mLayoutTitleCenter.setText("行业招聘");
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout_title_back:
+                finish();
+                break;
+            case R.id.layout_title_right:
+                break;
+        }
     }
 }

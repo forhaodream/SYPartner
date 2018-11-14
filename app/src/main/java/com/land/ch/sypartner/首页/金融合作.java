@@ -1,21 +1,22 @@
 package com.land.ch.sypartner.首页;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.example.liquorslib.view.ToolbarView;
 import com.land.ch.sypartner.R;
 import com.yyydjk.library.BannerLayout;
 
 import ch.chtool.base.BaseActivity;
 
-public class 金融合作 extends BaseActivity {
+public class 金融合作 extends BaseActivity implements View.OnClickListener {
 
-    private ToolbarView m金融合作tbv;
     private BannerLayout mBanner;
     private RecyclerView mRecyclerView;
+    private ImageView mLayoutTitleBack;
+    private TextView mLayoutTitleRight;
+    private TextView mLayoutTitleCenter;
 
 
     @Override
@@ -25,26 +26,32 @@ public class 金融合作 extends BaseActivity {
 
     @Override
     public void initView() {
-        m金融合作tbv = (ToolbarView) findViewById(R.id.金融合作tbv);
-        m金融合作tbv.setOnViewClickListener(new ToolbarView.OnRightClickListener() {
-            @Override
-            public void onClick() {
-
-            }
-        });
-        m金融合作tbv.setOnViewClickListener(new ToolbarView.OnLeftClickListener() {
-            @Override
-            public void onClick() {
-
-            }
-        });
         mBanner = (BannerLayout) findViewById(R.id.banner);
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
+        mLayoutTitleBack = findViewById(R.id.layout_title_back);
+        mLayoutTitleBack.setOnClickListener(this);
+        mLayoutTitleRight = findViewById(R.id.layout_title_right);
+        mLayoutTitleRight.setOnClickListener(this);
+        mLayoutTitleRight.setText("+");
+        mLayoutTitleRight.setTextSize(22);
+        mLayoutTitleCenter = findViewById(R.id.layout_title_center);
+        mLayoutTitleCenter.setText("金融合作");
     }
 
     @Override
     public void initData() {
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout_title_back:
+                finish();
+                break;
+            case R.id.layout_title_right:
+                break;
+        }
     }
 
 

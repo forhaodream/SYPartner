@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/as_color"
+    android:orientation="vertical"
+    tools:context=".个人.修改个人资料">
+
+    <include layout="@layout/layout_title_right"/>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260px"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="头像"
+            android:textColor="@android:color/black"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="220px"
+            android:layout_height="220px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.example.liquorslib.view.LEditSingleView
+        android:id="@+id/昵称LEV"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_marginTop="6px"
+        app:LES_label="昵称"
+        app:LES_valueHint="昵称"/>
+
+    <com.example.liquorslib.view.LEditSingleView
+        android:id="@+id/性别LEV"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        app:LES_label="性别"
+        app:LES_valueHint="性别"/>
+
+    <com.example.liquorslib.view.LEditSingleView
+        android:id="@+id/手机号LEV"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        app:LES_label="手机号"
+        app:LES_valueHint="手机号"/>
+
+    <com.example.liquorslib.view.LEditSingleView
+        android:id="@+id/账号类型LEV"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        app:LES_label="账号类型"
+        app:LES_valueHint="账号类型"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -4,26 +4,28 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.land.ch.sypartner.R;
 import com.zhy.autolayout.AutoRelativeLayout;
 
-public class 收货地址 extends AppCompatActivity implements View.OnClickListener {
+public class 会员充值 extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView mLayoutTitleBack;
-    /**
-     * 添加新地址
-     */
     private TextView mLayoutTitleText;
     private AutoRelativeLayout mLayoutTitleRlc;
     private RecyclerView mRecyclerView;
+    /**
+     * 确认充值
+     */
+    private Button m确认充值btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shouhuodizhi);
+        setContentView(R.layout.activity_huiyuanchongzhi);
         initView();
     }
 
@@ -33,15 +35,20 @@ public class 收货地址 extends AppCompatActivity implements View.OnClickListe
         mLayoutTitleText = (TextView) findViewById(R.id.layout_title_text);
         mLayoutTitleRlc = (AutoRelativeLayout) findViewById(R.id.layout_title_rlc);
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
+        m确认充值btn = (Button) findViewById(R.id.确认充值btn);
+        m确认充值btn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            default:
-                break;
             case R.id.layout_title_back:
+                finish();
+                break;
+            case R.id.确认充值btn:
+                finish();
                 break;
         }
     }
+
 }

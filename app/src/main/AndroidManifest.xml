@@ -3,6 +3,7 @@
           package="com.land.ch.sypartner">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -17,22 +18,20 @@
             android:name="design_height"
             android:value="1920"/>
 
-        <activity android:name=".activity.HomeActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.公共分类界面">
-        </activity>
+        <activity android:name=".activity.公共分类界面"/>
+        <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.房源速配">
         </activity>
         <activity android:name=".首页.学区房搜索">
         </activity>
         <activity android:name=".首页.共享房源">
-        </activity>
-        <activity android:name=".首页.地铁出行">
         </activity>
         <activity android:name=".首页.金融合作">
         </activity>
@@ -52,6 +51,14 @@
         <activity android:name=".糖果屋.使用说明">
         </activity>
         <activity android:name=".个人.编辑地址">
+        </activity>
+        <activity android:name=".个人.修改个人资料">
+        </activity>
+        <activity android:name=".筛选条件.房源类型">
+        </activity>
+        <activity android:name=".个人.会员充值">
+        </activity>
+        <activity android:name=".个人.修改密码">
         </activity>
     </application>
 

@@ -30,13 +30,14 @@
             app:LES_label="电话"
             app:LES_valueHint="电话"/>
 
-        <com.example.liquorslib.view.LEditSingleView
-            android:id="@+id/收货地址LEV"
+        <com.example.liquorslib.view.LTextView
+            android:id="@+id/收货地址LTV"
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:layout_marginTop="12px"
-            app:LES_label="收货地址"
-            app:LES_valueHint="收货地址"/>
+            app:LTS_label="收货地址"
+            app:LTS_value="收货地址"
+            app:LTS_valueColor="@color/text_grays"/>
 
         <com.example.liquorslib.view.LEditSingleView
             android:id="@+id/详细地址LEV"

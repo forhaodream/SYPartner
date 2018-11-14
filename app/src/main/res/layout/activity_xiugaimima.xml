@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".个人.修改密码">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title"/>
+
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/旧密码LEV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            app:LES_label="旧密码"
+            app:LES_valueHint="旧密码"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/新密码LEV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            app:LES_label="新密码"
+            app:LES_valueHint="新密码"/>
+
+        <com.example.liquorslib.view.LEditSingleView
+            android:id="@+id/确认密码LEV"
+            android:layout_width="match_parent"
+            android:layout_height="130px"
+            app:LES_label="确认密码"
+            app:LES_valueHint="确认密码"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/保存btn"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="100px"
+        android:background="@color/theme_green"
+        android:text="保存"
+        android:textColor="@color/white"/>
+</com.zhy.autolayout.AutoRelativeLayout>

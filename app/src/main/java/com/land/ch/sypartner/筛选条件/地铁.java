@@ -1,29 +1,34 @@
-package com.land.ch.sypartner.个人;
+package com.land.ch.sypartner.筛选条件;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.land.ch.sypartner.R;
 import com.zhy.autolayout.AutoRelativeLayout;
 
-public class 收货地址 extends AppCompatActivity implements View.OnClickListener {
+import ch.chtool.utils.SpUtils;
+
+/**
+ * Created by CH
+ * on 2018/11/14 11:27
+ */
+public class 地铁 extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView mLayoutTitleBack;
-    /**
-     * 添加新地址
-     */
     private TextView mLayoutTitleText;
     private AutoRelativeLayout mLayoutTitleRlc;
-    private RecyclerView mRecyclerView;
+    private ListView mListView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shouhuodizhi);
+        setContentView(R.layout.activity_fangyuanleixing);
         initView();
     }
 
@@ -31,16 +36,22 @@ public class 收货地址 extends AppCompatActivity implements View.OnClickListe
         mLayoutTitleBack = (ImageView) findViewById(R.id.layout_title_back);
         mLayoutTitleBack.setOnClickListener(this);
         mLayoutTitleText = (TextView) findViewById(R.id.layout_title_text);
+        mLayoutTitleText.setText("地铁");
         mLayoutTitleRlc = (AutoRelativeLayout) findViewById(R.id.layout_title_rlc);
-        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
+        mListView = findViewById(R.id.ListView);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SpUtils.putString(地铁.this, "ditie", "");
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            default:
-                break;
             case R.id.layout_title_back:
+                finish();
                 break;
         }
     }

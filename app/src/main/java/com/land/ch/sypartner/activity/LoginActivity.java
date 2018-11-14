@@ -130,10 +130,11 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
                 break;
             case R.id.activity_login_btn:
-                if (!TextUtils.isEmpty(mActivityLoginUserEd.getText()) && !TextUtils.isEmpty(mActivityLoginPsdEd.getText())) {
-                } else {
-                    Toast.makeText(this, "请填写手机号/密码", Toast.LENGTH_SHORT).show();
-                }
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+//                if (!TextUtils.isEmpty(mActivityLoginUserEd.getText()) && !TextUtils.isEmpty(mActivityLoginPsdEd.getText())) {
+//                } else {
+//                    Toast.makeText(this, "请填写手机号/密码", Toast.LENGTH_SHORT).show();
+//                }
                 break;
             case R.id.立即注册tv:
                 break;

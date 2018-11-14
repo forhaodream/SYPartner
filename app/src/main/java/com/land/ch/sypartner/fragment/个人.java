@@ -1,5 +1,6 @@
 package com.land.ch.sypartner.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.land.ch.sypartner.R;
+import com.land.ch.sypartner.个人.SettingActivity;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.zhy.autolayout.AutoRelativeLayout;
 
@@ -71,6 +73,7 @@ public class 个人 extends BaseFragment implements View.OnClickListener {
             case R.id.fragment_mine_head:
                 break;
             case R.id.fragment_mine_setting:
+                startActivity(new Intent(getActivity(), SettingActivity.class));
                 break;
             case R.id.会员充值rlc:
                 break;

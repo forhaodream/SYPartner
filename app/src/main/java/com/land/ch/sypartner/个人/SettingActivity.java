@@ -1,5 +1,9 @@
 package com.land.ch.sypartner.个人;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.liquorslib.view.LTextView;
 import com.land.ch.sypartner.R;
+import com.land.ch.sypartner.activity.WebViewActivity;
 import com.zhy.autolayout.AutoRelativeLayout;
 
 import ch.chtool.base.BaseActivity;
@@ -76,19 +81,56 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
             case R.id.layout_title_rlc:
                 break;
             case R.id.个人资料修改LTV:
+                startActivity(new Intent(SettingActivity.this, 编辑地址.class));
                 break;
             case R.id.收货地址LTV:
+                startActivity(new Intent(SettingActivity.this, 收货地址.class));
                 break;
             case R.id.修改密码LTV:
+                startActivity(new Intent(SettingActivity.this, 修改密码.class));
                 break;
             case R.id.常见问题LTV:
+                Intent toQues = new Intent(SettingActivity.this, WebViewActivity.class);
+                toQues.putExtra("title_str", "常见问题");
+                toQues.putExtra("web_url", "");
+                startActivity(toQues);
                 break;
             case R.id.关于我们LTV:
+                Intent toAbout = new Intent(SettingActivity.this, WebViewActivity.class);
+                toAbout.putExtra("title_str", "关于我们");
+                toAbout.putExtra("web_url", "");
+                startActivity(toAbout);
                 break;
             case R.id.客服电话LTV:
+                showNormalDialog();
                 break;
             case R.id.退出登录btn:
                 break;
         }
+    }
+
+    private void showNormalDialog() {
+        AlertDialog.Builder normalDialog = new AlertDialog.Builder(this);
+        normalDialog.setTitle("确认拨打电话?");
+        normalDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent();
+                        intent.setAction(Intent.ACTION_CALL);
+                        intent.setData(Uri.parse("tel:4006060279"));
+                        startActivity(intent);
+                    }
+                });
+        normalDialog.setNegativeButton("取消",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+                    }
+                });
+        // 显示
+        normalDialog.show();
     }
 }

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.liquorslib.view.LEditSingleView;
+import com.example.liquorslib.view.LTextView;
 import com.land.ch.sypartner.R;
 import com.lljjcoder.citypickerview.widget.CityPicker;
 import com.zhy.autolayout.AutoRelativeLayout;
@@ -21,9 +22,9 @@ public class 编辑地址 extends AppCompatActivity implements View.OnClickListe
     private AutoRelativeLayout mLayoutTitleRlc;
     private LEditSingleView m收货人LEV;
     private LEditSingleView m电话LEV;
-    private LEditSingleView m收货地址LEV;
     private LEditSingleView m详细地址LEV;
     private Button m保存btn;
+    private LTextView m收货地址LTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,11 @@ public class 编辑地址 extends AppCompatActivity implements View.OnClickListe
         mLayoutTitleRlc = findViewById(R.id.layout_title_rlc);
         m收货人LEV = findViewById(R.id.收货人LEV);
         m电话LEV = findViewById(R.id.电话LEV);
-        m收货地址LEV = findViewById(R.id.收货地址LEV);
-        m收货地址LEV.setOnClickListener(this);
         m详细地址LEV = findViewById(R.id.详细地址LEV);
         m保存btn = findViewById(R.id.保存btn);
         m保存btn.setOnClickListener(this);
+        m收货地址LTV = findViewById(R.id.收货地址LTV);
+        m收货地址LTV.setOnClickListener(this);
     }
 
     @Override
@@ -56,16 +57,15 @@ public class 编辑地址 extends AppCompatActivity implements View.OnClickListe
             case R.id.layout_title_back:
                 finish();
                 break;
-            case R.id.收货地址LEV:
-                initCity();
-                break;
             case R.id.layout_title_right:
                 // 走接口
                 finish();
                 break;
             case R.id.保存btn:
                 break;
-
+            case R.id.收货地址LTV:
+                initCity();
+                break;
         }
     }
 
@@ -78,7 +78,7 @@ public class 编辑地址 extends AppCompatActivity implements View.OnClickListe
                 .cancelTextColor("#696969")
                 .province("辽宁省")
                 .city("沈阳市")
-                .district("沈河区")
+                .district("皇姑区")
                 .textColor(Color.parseColor("#000000"))
                 .provinceCyclic(true)
                 .cityCyclic(false)
@@ -101,7 +101,7 @@ public class 编辑地址 extends AppCompatActivity implements View.OnClickListe
                 //邮编
                 String code = citySelected[3];
                 //为TextView赋值
-                m收货地址LEV.setValue(province.trim() + "-" + city.trim() + "-" + district.trim());
+                m收货地址LTV.setValue(province.trim() + "-" + city.trim() + "-" + district.trim());
             }
         });
     }

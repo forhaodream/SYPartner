@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.zhy.autolayout.AutoLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".首页.金融合作">
 
-    <com.example.liquorslib.view.ToolbarView
-        android:id="@+id/金融合作tbv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:Toolbar_label="金融合作"
-        app:Toolbar_left="@mipmap/back"
-        app:Toolbar_right="@mipmap/back"/>
+    <include layout="@layout/layout_title_right"/>
 
     <com.yyydjk.library.BannerLayout
         android:id="@+id/banner"
